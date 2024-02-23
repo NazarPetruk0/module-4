@@ -12,10 +12,8 @@ def get_cats_info(path):
 
             return cats_info
 
-    except FileNotFoundError:
-        raise FileNotFoundError(f"Файл '{path}' не знайдено.")
-    except Exception as e:
-        raise Exception(f"Помилка при обробці файлу: {str(e)}")
+    except Exception:
+        pass
 
 cats_info = get_cats_info("path/to/cats_file.txt")
 print(cats_info)
